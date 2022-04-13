@@ -32,6 +32,6 @@ tar_target(raw_data, airquality)
 tar_target(response_data, clean_raw_data(raw_data))
 ```
 
-```{r}
-tar_mermaid()
+```{r dependency-graph, results='asis'}
+cat(c("```mermaid", tar_mermaid(), "```"), sep = "\n")
 ```

@@ -21,15 +21,18 @@ tar_target(response_data, clean_raw_data(raw_data))
 ```
 
 ``` r
-tar_mermaid()
-#>  [1] "graph LR"                                                                         
-#>  [2] "  subgraph Legend"                                                                
-#>  [3] "    outdated([Outdated]):::outdated --- stem([Stem]):::none"                      
-#>  [4] "  end"                                                                            
-#>  [5] "  subgraph Graph"                                                                 
-#>  [6] "    raw_data([raw_data]):::outdated --> response_data([response_data]):::outdated"
-#>  [7] "  end"                                                                            
-#>  [8] "  classDef outdated stroke:#000000,color:#000000,fill:#78B7C5;"                   
-#>  [9] "  classDef none stroke:#000000,color:#000000,fill:#94a4ac;"                       
-#> [10] "  linkStyle 0 stroke-width:0px;"
+cat(c("```mermaid", tar_mermaid(), "```"), sep = "\n")
+```
+
+``` mermaid
+graph LR
+  subgraph Legend
+    outdated([Outdated]):::outdated --- stem([Stem]):::none
+  end
+  subgraph Graph
+    raw_data([raw_data]):::outdated --> response_data([response_data]):::outdated
+  end
+  classDef outdated stroke:#000000,color:#000000,fill:#78B7C5;
+  classDef none stroke:#000000,color:#000000,fill:#94a4ac;
+  linkStyle 0 stroke-width:0px;
 ```
