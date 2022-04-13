@@ -1,0 +1,18 @@
+Package: modds
+Title: An Example Modern Data Science Package in R
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ryan", 
+           family = "Chitwood", 
+           role = c("aut", "cre"))
+Description: An example showcasing modern data science tools in R.
+License: MIT + file LICENSE
+Depends: 
+    R (>= 4.1.0)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Config/testthat/edition: 3
